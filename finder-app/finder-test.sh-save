@@ -60,7 +60,6 @@ done
 OUTPUTSTRING=$(./finder.sh "$WRITEDIR" "$WRITESTR")
 
 # remove temporary directories
-# commenting from here downwards MNn
 rm -rf /tmp/aeld-data
 
 set +e
