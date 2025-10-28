@@ -1,0 +1,319 @@
+    1  git status
+    2  ls
+    3  cd LinuxTraining/
+    4  s
+    5  ls
+    6  git status
+    7  mkdir assignments_1
+    8  git init
+    9  ls
+   10  rm -r assignments_1/
+   11  which git
+   12  git remote add assignments-base https://github.com/cu-ecen-aeld/aesd-assignments.git
+   13  git fetch assignments-base
+   14  ls
+   15  git merge assignments-base/master
+   16  ls
+   17  git submodule update --init --recursive
+   18  git status
+   19  sudo apt-get install -y build-essential ruby cmake
+   20  sudo apt-get update
+   21  sudo apt-get install ./docker-desktop-amd64.deb
+   22  ls
+   23  sudo apt-get install ./docker-desktop-amd64.deb
+   24  ls /opt
+   25  sudo apt-get update
+   26  sudo apt-get install ./docker-desktop-amd64.deb
+   27  systemctl --user start docker-desktop
+   28  sudo apt install gnome-terminal
+   29  sudo apt-get update
+   30  sudo apt-get install ./docker-desktop-amd64.deb
+   31  gnome-terminal
+   32  ls
+   33  cd LinuxTraining/
+   34  ls
+   35  ls -al
+   36  git status
+   37  sudo apt-get install ./docker-desktop-amd64.deb
+   38  sudo apt remove docker-desktop docker docker.io docker-engine docker-ce-cli containerd runc
+   39  sudo apt --fix-broken install
+   40  sudo apt update
+   41  sudo apt install ca-certificates curl gnupg
+   42  sudo install -m 0755 -d /etc/apt/keyrings
+   43  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+   44  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
+   45    https://download.docker.com/linux/ubuntu \
+   46    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   47  sudo apt update
+   48  sudo apt install docker-ce-cli
+   49  ls
+   50  sudo apt install ./docker-desktop-amd64.deb
+   51  ls
+   52  sudo apt --fix-broken install
+   53  sudo apt autoremove
+   54  ls
+   55  mkdir actions-runner && cd actions-runner
+   56  curl -o actions-runner-linux-x64-2.329.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.329.0/actions-runner-linux-x64-2.329.0.tar.gz
+   57  echo "194f1e1e4bd02f80b7e9633fc546084d8d4e19f3928a324d512ea53430102e1d  actions-runner-linux-x64-2.329.0.tar.gz" | shasum -a 256 -c
+   58  tar xzf ./actions-runner-linux-x64-2.329.0.tar.gz
+   59  ./config.sh --url https://github.com/cu-ecen-aeld/assignment-1-MichealNunan --token BY5F2U5C6P75NTOWVKDWXYDI6YVDK
+   60  ls
+   61  ls -al
+   62  ls
+   63  ./run.sh 
+   64  ls
+   65  cd LinuxTraining/
+   66  ls
+   67  ./unit-test.sh 
+   68  ls
+   69  cd conf/
+   70  ls
+   71  nedit username.txt 
+   72  cd <<
+   73  cd ..
+   74  ls
+   75  cd student-test/
+   76  ls
+   77  cd assignment1/
+   78  ls
+   79  nedit Test_validate_username.c 
+   80  nedit Test_validate_username.c 1
+   81  nedit Test_validate_username.c &
+   82  ls
+   83  cd ..
+   84  ls
+   85  cd ..
+   86  ls
+   87  cd assignment-autotest/
+   88  ls
+   89  cd ..
+   90  ls
+   91  cd examples/
+   92  ls
+   93  cd autotest-validate/
+   94  ls
+   95  nedit -r autotest-validate.c &
+   96  nedit -read autotest-validate.c &
+   97  nedit autotest-validate.c &
+   98  cd 
+   99  ls
+  100  cd LinuxTraining/
+  101  ls
+  102  ./unit-test.sh 
+  103  ls
+  104  cd finder-app/
+  105  ls
+  106  cd ..
+  107  ls
+  108  cd examples/
+  109  ls
+  110  cd autotest-validate/
+  111  ls
+  112  cd ..
+  113  ls
+  114  cd ..
+  115  ls
+  116  cd assignment-autotest/
+  117  ls
+  118  cd test/
+  119  ls
+  120  cd assignment
+  121  cd assignment1
+  122  ls
+  123  cd ..
+  124  ls
+  125  cd ..
+  126  ls
+  127  cd ..
+  128  ls
+  129  cd finder-app/
+  130  ls
+  131  nedit finder.sh&
+  132  ls
+  133  chmod u+x finder.sh 
+  134  ls -al
+  135  ./finder.sh 
+  136  ./finder.sh /LinuxTraining/finder-app
+  137  ./finder.sh "/LinuxTraining/finder-app"
+  138  ls
+  139  find . -name finder
+  140  find . -name finder.sh
+  141  find / -name finder.sh
+  142  find / -name proc
+  143  find / -name /proc
+  144  find ../ -name /proc
+  145  find ../ -wholename /proc
+  146  find / -wholename /proc
+  147  find . -wholename /proc
+  148  ./finder.sh "/LinuxTraining/finder-app"
+  149  man test
+  150  ls
+  151  cd LinuxTraining/
+  152  ls
+  153  cd finder-app/
+  154  ls
+  155  ./finder.sh "../examples"
+  156  ./finder.sh "examples"
+  157  ./finder.sh "../examples"
+  158  ./finder.sh "../examples" "include"
+  159  ./finder.sh "examples" "include"
+  160  tree
+  161  tree ../../
+  162  tree ../
+  163  tree ../ | grep examples
+  164  cd ..
+  165  ls
+  166  cd LinuxTraining/
+  167  ls
+  168  cd examples/
+  169  ls
+  170  ls 
+  171  ls -r autotest-validate/
+  172  ls
+  173  cd ..
+  174  find -type f
+  175  ls
+  176  find -type f | grep -c
+  177  find -type f | grep -c //
+  178  find ./ -type f
+  179  find ./ -type f | grep include
+  180  find ./ -type f | grep -c include
+  181  ls
+  182  find examples -type f | grep -c include
+  183  find examples -type f | grep include
+  184  ls
+  185  cd examples/
+  186  ls
+  187  cd autotest-validate/
+  188  ls
+  189  grep include *
+  190  grep -c include *
+  191  find -type c
+  192  find -type f
+  193  find -type f -c
+  194  find -c -type f
+  195  ls -c
+  196  ls | grep -c
+  197  ls
+  198  grep include *
+  199  grep include * -c
+  200  man find
+  201  ls
+  202  cd ..
+  203  ls
+  204  cd ..
+  205  ls
+  206  find conf -type f | wc -l
+  207  ls conf
+  208  ls build
+  209  find build -type f | wc -l
+  210  grep -r include build/*
+  211  grep -r include build/* | wc -l
+  212  grep -r include build/* | wc
+  213  grep -r include build/* | c
+  214  grep -r include build/* | cw
+  215  grep -r include build/* | -c
+  216  grep -c include -r *
+  217  grep -c include *
+  218  ls
+  219  cd assignment-autotest/
+  220  ls
+  221  cd examples/
+  222  ls
+  223  cd autotest-validate/
+  224  ls
+  225  cd ..
+  226  ls
+  227  cd ..
+  228  ls
+  229  cd ..
+  230  ls
+  231  find assignment-autotest/ -type f | wc -l
+  232  grep -roh include assignment-autotest/ | wc -l
+  233  ls
+  234  cd finder-app/
+  235  ls
+  236  ./finder.sh ../assignment-autotest/ include
+  237  ./finder.sh assignment-autotest/ include
+  238  ./finder.sh assignment-autotest/ 
+  239  ./finder.sh ../assignment-autotest/ include
+  240  ls
+  241  cp finder.sh writer.sh
+  242  ls
+  243  nedit writer.sh &
+  244  ./writer.sh ../myOwnDir/myText.txt
+  245  hello > tempFile
+  246  cat "hello" > tempFile
+  247  cat 'hello' > tempFile
+  248  echo 'hello' > tempFile
+  249  echo 'hello' > /tempDir/tempFile.txt
+  250  echo 'hello' > ./tempDir/tempFile.txt
+  251  ./writer.sh /myOwnDir/myText.txt DidItWork
+  252  ls
+  253  mkdir tempDir
+  254  ./writer.sh ./myOwnDir/myText.txt DidItWork
+  255  ls
+  256  cd myOwnDir/
+  257  ls
+  258  cat myText.txt 
+  259  ./writer.sh ./myOwnDir/myText.txt DidItWork
+  260  cd ..
+  261  ./writer.sh ./myOwnDir/myText.txt DidItWork
+  262  ls
+  263  ls ./myOwnDir/
+  264  ls myOwnDir/
+  265  ls /myOwnDir/
+  266  ./writer.sh ./myOwnDir/myText.txt DidItWork
+  267  ./writer.sh ./myOwnDir/myText.txt DidItDoOK
+  268  ls
+  269  cat myOwnDir/myText.txt 
+  270  rm -r myOwnDir/
+  271  rm -r tempDir/
+  272  rm tempFile 
+  273  ls
+  274  cd LinuxTraining/
+  275  ls -al ~/.ssh
+  276  ls -al
+  277  #ssh-keygen -t ed25519 -C "nunan.micheal
+  278  ssh-keygen -t ed25519 -C "nunan.micheal@orange.fr"
+  279  eval "$(ssh-agent -s)"
+  280  cd /
+  281  ls
+  282  cd home/
+  283  ls
+  284  cd mnunan/
+  285  ls
+  286  ls -al
+  287  cd .ssh
+  288  ls
+  289  pwd
+  290  cd 
+  291  ls
+  292  cd LinuxTraining/
+  293  ssh-add /home/mnunan/.ssh/id_ed25519
+  294  cat /home/mnunan/.ssh/id_ed25519.pub 
+  295  ssh -T git@github.com
+  296  history
+  297  git status
+  298  git remote add origin https://github.com/cu-ecen-aeld/assignment-1-MichealNunan.git
+  299  git status origin
+  300  git push -u origin master
+  301  git remote add origin git@github.com:cu-ecen-aeld/assignment-1-MichealNunan.git
+  302  git remote add newOrigin git@github.com:cu-ecen-aeld/assignment-1-MichealNunan.git
+  303  git push -u newOrigin master
+  304  git status
+  305  git list
+  306  ls
+  307  git rm --cached docker-desktop-amd64.deb
+  308  ls -al
+  309  git rm --cached actions-runner
+  310  git rm -r --cached actions-runner
+  311  ls -al
+  312  git push -u newOrigin master
+  313  git commit --amend
+  314  git push -u newOrigin master
+  315  echo history > gitStuff.txt
+  316  cat gitStuff.txt 
+  317  history
+  318  ls
+  319  history > gitStuff.txt 
