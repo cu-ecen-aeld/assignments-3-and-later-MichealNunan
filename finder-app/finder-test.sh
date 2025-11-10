@@ -52,7 +52,7 @@ then
 fi
 echo "Removing the old writer utility and compiling as a native application"
 #make clean
-make
+#make         removing make step for assignment 3-1
 
 for i in $( seq 1 $NUMFILES)
 do
