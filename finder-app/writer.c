@@ -139,9 +139,9 @@ int main(int argc, char **argv)
         syslog(LOG_ERR, "ERROR: failed to compute parent directory for '%s'", dirAndFile);
         return 1;
     }
-
-    /* Create parent directory (mkdir -p) *//*
-    if (strcmp(dirName, ".") != 0) {
+*/
+    /* Create parent directory (mkdir -p) */
+ /*   if (strcmp(dirName, ".") != 0) {
         if (mkdir_p(dirName, 0755) != 0) {
             log_error("ERROR: failed to create directory '%s': %s", dirName, strerror(errno));
             free(dirName);

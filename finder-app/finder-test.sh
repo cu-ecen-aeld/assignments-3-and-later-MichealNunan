@@ -34,7 +34,8 @@ rm -rf "${WRITEDIR}"
 # create $WRITEDIR if not assignment1
 mkdir -p /tmp/aeld-data/
 
-assignment=`cat ../conf/assignment.txt`
+#assignment=`cat ../conf/assignment.txt`
+assignment=`cat conf/assignment.txt`
 
 if [ $assignment != 'assignment2' ]
 then
@@ -51,8 +52,19 @@ then
 	fi
 fi
 echo "Removing the old writer utility and compiling as a native application"
+
+#	ls
+#	pwd
+
 #make clean
 #make         removing make step for assignment 3-1
+
+#    export ARCH=arm64
+#    export CROSS_COMPILE=aarch64-none-linux-gnu-
+#	make clean
+ 
+#	make
+#chmod 777 writer
 
 for i in $( seq 1 $NUMFILES)
 do
