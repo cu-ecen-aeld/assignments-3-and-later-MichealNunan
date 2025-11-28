@@ -127,7 +127,8 @@ ${CROSS_COMPILE}readelf -a bin/busybox | grep "Shared library"
 # TODO: Add library dependencies to rootfs
 #cp ${CROSS_COMPILE}/libc/lib/ld-linux-aarch64.so.1 ${OUTDIR}/rootfs/lib/
 
-export MY_CROSS=$HOME/arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu
+#export MY_CROSS=$HOME/arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu
+export MY_CROSS=/home/mnunan/arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu
 
 cp ${MY_CROSS}/aarch64-none-linux-gnu/libc/lib/ld-linux-aarch64.so.1 ${OUTDIR}/rootfs/lib/
 
