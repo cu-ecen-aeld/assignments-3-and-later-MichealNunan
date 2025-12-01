@@ -124,17 +124,31 @@ echo "Library dependencies"
 ${CROSS_COMPILE}readelf -a bin/busybox | grep "program interpreter"
 ${CROSS_COMPILE}readelf -a bin/busybox | grep "Shared library"
 
+    export CROSS_COMPILE=aarch64-none-linux-gnu-
+    # export CROSS_COMPILE=/home/mnunan/arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-
+
 # TODO: Add library dependencies to rootfs
 #cp ${CROSS_COMPILE}/libc/lib/ld-linux-aarch64.so.1 ${OUTDIR}/rootfs/lib/
 
 #export MY_CROSS=$HOME/arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu
-export MY_CROSS=/home/mnunan/arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu
+#cp ${CROSS_COMPILE}/libc/lib/ld-linux-aarch64.so.1 ${OUTDIR}/rootfs/lib/
+#export MY_CROSS=/home/mnunan/arm-gnu-toolchain-13.3.rel1-x86_64-aarch64-none-linux-gnu
 
-cp ${MY_CROSS}/aarch64-none-linux-gnu/libc/lib/ld-linux-aarch64.so.1 ${OUTDIR}/rootfs/lib/
 
-cp ${MY_CROSS}/aarch64-none-linux-gnu/libc/lib64/libm.so.6 ${OUTDIR}/rootfs/lib64/
-cp ${MY_CROSS}/aarch64-none-linux-gnu/libc/lib64/libresolv.so.2 ${OUTDIR}/rootfs/lib64/
-cp ${MY_CROSS}/aarch64-none-linux-gnu/libc/lib64/libc.so.6 ${OUTDIR}/rootfs/lib64/
+localCROSSCOMPILE=`aarch64-none-linux-gnu-gcc -print-sysroot`
+
+cp ${localCROSSCOMPILE}/lib/ld-linux-aarch64.so.1 ${OUTDIR}/rootfs/lib/
+
+#cp ${MY_CROSS}/aarch64-none-linux-gnu/libc/lib/ld-linux-aarch64.so.1 ${OUTDIR}/rootfs/lib/
+
+#cp ${MY_CROSS}/aarch64-none-linux-gnu/libc/lib64/libm.so.6 ${OUTDIR}/rootfs/lib64/
+#cp ${MY_CROSS}/aarch64-none-linux-gnu/libc/lib64/libresolv.so.2 ${OUTDIR}/rootfs/lib64/
+#cp ${MY_CROSS}/aarch64-none-linux-gnu/libc/lib64/libc.so.6 ${OUTDIR}/rootfs/lib64/
+
+cp ${localCROSSCOMPILE}/lib64/libm.so.6 ${OUTDIR}/rootfs/lib64/
+cp ${localCROSSCOMPILE}/lib64/libresolv.so.2 ${OUTDIR}/rootfs/lib64/
+cp ${localCROSSCOMPILE}/lib64/libc.so.6 ${OUTDIR}/rootfs/lib64/
+
 
 # TODO: Make device nodes
 #777
